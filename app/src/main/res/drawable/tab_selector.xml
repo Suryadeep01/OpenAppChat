@@ -1,0 +1,23 @@
+<!-- res/drawable/round_border_selected_tab.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Unselected state -->
+    <item android:state_selected="false">
+        <shape android:shape="rectangle">
+            <!-- Set the background color for unselected tabs -->
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+    <!-- Selected state -->
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <!-- Set the background color for selected tabs -->
+            <solid android:color="#3F51B5" />
+            <!-- Set the corner radius to create a round border -->
+            <corners android:radius="16dp" />
+            <!-- Add a stroke to create a border -->
+            <stroke
+                android:color="#3F51B5"
+                android:width="2dp" />
+        </shape>
+    </item>
+</selector>

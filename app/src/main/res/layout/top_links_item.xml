@@ -1,0 +1,131 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="116dp"
+    android:elevation="8dp"
+    android:padding="6dp"
+    >
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="5dp"
+        android:elevation="9dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"
+                android:id="@+id/topLeftIcon"
+                android:scaleType="fitXY"
+                android:layout_width="48dp"
+                android:layout_height="48dp" />
+
+
+            <LinearLayout
+                android:id="@+id/topLeftTextLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/topLeftIcon"
+                android:layout_alignTop="@id/topLeftIcon"
+                android:layout_marginStart="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Same Link Name"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:maxLength="10"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/dateText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="22 Aug 2022"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/topRightTextLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rightSideTextLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/rightSideText"
+                    android:layout_width="32dp"
+                    android:layout_height="25dp"
+                    android:text="2323"
+                    android:textSize="14sp"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="clickes"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 android:layout_marginBottom="5dp"
+                android:layout_alignStart="@+id/topLeftIcon"
+                android:layout_alignEnd="@+id/rightSideTextLayout"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="-16dp"
+                android:background="@drawable/link_border">
+
+                <TextView
+                    android:id="@+id/links_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:text="DashBoard"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/clip_board"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/copy"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DashBoardActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:background="#0E6FFF"
+    android:layout_height="fill_parent">
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:text="DashBoard"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toTopOf="@id/top_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+     <ImageView
+         android:id="@+id/settings"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+         android:src="@drawable/button"
+         app:layout_constraintBottom_toTopOf="@id/top_container"
+         android:layout_marginEnd="15dp"
+         android:layout_width="37dp"
+         android:layout_height="37dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_container"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/background"
+        >
+        <LinearLayout
+            android:id="@+id/name_data"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/greetings"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="Good Morning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:text="Ajay Manva"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/chart_view"
+            app:layout_constraintTop_toBottomOf="@+id/name_data"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+           <com.github.mikephil.charting.charts.LineChart
+               android:layout_marginStart="20dp"
+               android:layout_marginEnd="20dp"
+               android:id="@+id/line_chart"
+               android:layout_width="match_parent"
+               android:layout_height="200dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:padding="10dp"
+                android:paddingBottom="25dp"
+                android:id="@+id/horizontal_cycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+             android:background="#F5F5F5"
+            app:tabBackground="@drawable/tab_selector"
+            app:layout_constraintTop_toBottomOf="@id/chart_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorHeight="0dp" />
+
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabs"
+           >
+
+        </androidx.viewpager.widget.ViewPager>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
